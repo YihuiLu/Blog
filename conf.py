@@ -21,18 +21,18 @@ enable_jsdelivr = {
 # 站点设置
 site_name = "一灰的技术博客"
 site_logo = "${static_prefix}logo.png"
-site_build_date = "2019-12-18T16:51+08:00"
+site_build_date = "2019-2-18T16:51+08:00"
 author = "一灰"
 email = "isRichard.Lu@gmail.com"
 author_homepage = "https://github.com/YihuiLu"
 description = "花径不曾缘客扫，蓬门今始为君开"
-key_words = ['Maverick', '熊猫小A', 'Galileo', 'blog']
+key_words = ['Maverick', '一灰', '头痛记', 'blog']
 language = 'zh-CN'
 external_links = [
     {
         "name": "吾爱破解",
         "url": "https://www.52pojie.cn/",
-        "brief": "吾爱破解论坛致力于软件安全与病毒分析的前沿，丰富的技术版块交相辉映，由无数热衷于软件加密解密及反病毒爱好者共同维护."
+        "brief": "一个一灰常逛的论坛"
     },
     {
         "name": "一灰小站",
@@ -51,11 +51,11 @@ nav = [
         "url": "${site_prefix}archives/",
         "target": "_self"
     },
-    # {
-    #     "name": "头痛记",
-    #     "url": "${site_prefix}NoMigraine/",
-    #     "target": "_self"
-    # },
+    {
+        "name": "头痛记",
+        "url": "${site_prefix}NoMigraine/",
+        "target": "_self"
+    },
     {
         "name": "关于",
         "url": "${site_prefix}about/",
@@ -89,3 +89,10 @@ head_addon = r'''
 footer_addon = ''
 
 body_addon = ''
+
+valine = {
+    "enable": True,
+    "el": '#vcomments',
+    "appId": "FHu0SCPDeyBjMY4s0ECouzDf-gzGzoHsz",
+    "appKey": "UecRNirhvv66x0fxlpKjmFSk",
+}
