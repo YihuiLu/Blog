@@ -5,6 +5,13 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	
 
 <url>
+    <loc>/Blog/migraine/</loc>
+    <lastmod>2019-07-17</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.8</priority>
+</url>
+
+<url>
     <loc>/Blog/about/</loc>
     <lastmod>2017-06-28</lastmod>
     <changefreq>always</changefreq>
@@ -12,14 +19,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-    <loc>/Blog/archives/typography/</loc>
-    <lastmod>2019-12-18</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-</url>
-
-<url>
-    <loc>/Blog/archives/111/</loc>
+    <loc>/Blog/archives/redis/</loc>
     <lastmod>2019-07-17</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
