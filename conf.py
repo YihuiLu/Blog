@@ -24,7 +24,7 @@ site_logo = "${static_prefix}logo.png"
 site_build_date = "2019-12-18T16:51+08:00"
 author = "一灰"
 email = "isRichard.Lu@gmail.com"
-author_homepage = "https://www.imalan.cn"
+author_homepage = "https://github.com/YihuiLu"
 description = "花径不曾缘客扫，蓬门今始为君开"
 key_words = ['Maverick', '熊猫小A', 'Galileo', 'blog']
 language = 'zh-CN'
@@ -59,21 +59,21 @@ nav = [
 ]
 
 social_links = [
-    {
-        "name": "Twitter",
-        "url": "https://twitter.com/AlanDecode",
-        "icon": "gi gi-twitter"
-    },
+    # {
+    #     "name": "Twitter",
+    #     "url": "https://twitter.com/AlanDecode",
+    #     "icon": "gi gi-twitter"
+    # },
     {
         "name": "GitHub",
-        "url": "https://github.com/AlanDecode",
+        "url": "https://github.com/YihuiLu",
         "icon": "gi gi-github"
     },
-    {
-        "name": "Weibo",
-        "url": "https://weibo.com/5245109677/",
-        "icon": "gi gi-weibo"
-    }
+    # {
+    #     "name": "Weibo",
+    #     "url": "https://weibo.com/5245109677/",
+    #     "icon": "gi gi-weibo"
+    # }
 ]
 
 head_addon = r'''
