@@ -32,7 +32,7 @@ external_links = [
     {
         "name": "吾爱破解",
         "url": "https://www.52pojie.cn/",
-        "brief": "一个一灰常逛的论坛"
+        "brief": "一个一灰常逛的论坛~"
     },
     {
         "name": "一灰小站",
