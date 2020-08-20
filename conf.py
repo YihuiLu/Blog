@@ -53,7 +53,7 @@ nav = [
     },
     {
         "name": "头痛记",
-        "url": "${site_prefix}migraine/",
+        "url": "${site_prefix}Migraine/",
         "target": "_self"
     },
     {
