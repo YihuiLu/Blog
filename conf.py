@@ -51,11 +51,11 @@ nav = [
         "url": "${site_prefix}archives/",
         "target": "_self"
     },
-    {
-        "name": "头痛记",
-        "url": "${site_prefix}NoMigraine/",
-        "target": "_self"
-    },
+    # {
+    #     "name": "头痛记",
+    #     "url": "${site_prefix}NoMigraine/",
+    #     "target": "_self"
+    # },
     {
         "name": "关于",
         "url": "${site_prefix}about/",
