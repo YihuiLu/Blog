@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 头痛记
-slug: no_migraine
+slug: migraine
 date: 2019-7-17 20:34
 status: publish
 author: 一灰

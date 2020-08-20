@@ -4,7 +4,7 @@ title: 关于
 slug: about
 date: 2017/06/28 17:26:00
 status: publish
-author: 一灰
+author: AlanDecode
 categories: 
   - Maverick
   - Dev
@@ -17,6 +17,6 @@ tags:
 
 ## Contact
 
-Email: isRichard.Lu@gmail.com
+Email: hi#imalan.cn (replace # with @)
 
-
+Telegram：[AlanDecode](https://t.me/alandecode)
