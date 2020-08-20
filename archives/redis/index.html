@@ -11,7 +11,7 @@
     <meta name="template" content="Galileo" />
     <link rel="alternate" type="application/rss+xml" title="一灰的技术博客 &raquo; RSS 2.0" href="/Blog/feed/index.xml" />
     <link rel="alternate" type="application/atom+xml" title="一灰的技术博客 &raquo; ATOM 1.0" href="/Blog/feed/atom/index.xml" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/YihuiLu/Blog@gh-pages/assets/galileo-3f4dcc35c9.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/YihuiLu/Blog@gh-pages/assets/galileo-8d8763e752.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/YihuiLu/Blog@gh-pages/assets/ExSearch/ExSearch-182e5a8868.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/YihuiLu/Blog@gh-pages/assets/katex.min.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "https://cdn.jsdelivr.net/gh/YihuiLu/Blog@gh-pages/60f4866dddf6f33a1ee20ac6aea6daee.json"
+            api: "https://cdn.jsdelivr.net/gh/YihuiLu/Blog@gh-pages/3899b2be79d7fb10459e315e9f671659.json"
         }
     </script>
     
@@ -57,7 +57,7 @@
                 </div>
                 <div second id="ga-nav">
                     <nav class="navs">
-                        <ul><li><a class="ga-highlight" href="/Blog/" target="_self">首页</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/Blog/archives/" target="_self">归档</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/Blog/NoMigraine/" target="_self">头痛记</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/Blog/about/" target="_self">关于</a></li><span class="separator">·</span><li><a href="#" target="_self" class="search-form-input ga-highlight">搜索</a></li></ul>
+                        <ul><li><a class="ga-highlight" href="/Blog/" target="_self">首页</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/Blog/archives/" target="_self">归档</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/Blog/migraine/" target="_self">头痛记</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/Blog/about/" target="_self">关于</a></li><span class="separator">·</span><li><a href="#" target="_self" class="search-form-input ga-highlight">搜索</a></li></ul>
                     </nav>
                 </div>
             </header>
@@ -80,37 +80,27 @@
                 
             </span>
             <div class="ga-content_body">
-                <p>redis-py提供两个类Redis和StrictRedis用于实现Redis的命令，StrictRedis用于实现大部分官方的命令，并使用官方的语法和命令（比如，SET命令对应与StrictRedis.set方法）。Redis是StrictRedis的子类，用于向后兼容旧版本的redis-py。 简单说，官方推荐使用StrictRedis方法。</p>
-<p>不推荐Redis类，原因是他和咱们在redis-cli操作有些不一样，主要不一样是下面这三个方面。</p>
-<p>·LREM：参数 ‘num’ 和 ‘value’ 的顺序交换了一下，cli是 lrem queueName 0 ‘string’ 。 这里的0时所有的意思。 但是Redis这个类，把控制和string调换了。</p>
-<p>·ZADD：实现时 score 和 value 的顺序不小心弄反了，后来有人用了，就这样了</p>
-<p>·SETEX: time 和 value 的顺序反了</p>
-<p>.Pool: 连接池</p>
-<p>Redis的连接池的方法：</p>
-
+                <p>redis-py提供两个类Redis和StrictRedis用于实现Redis的命令，StrictRedis用于实现大部分官方的命令，并使用官方的语法和命令（比如，SET命令对应与StrictRedis.set方法）。Redis是StrictRedis的子类，用于向后兼容旧版本的redis-py。 简单说，官方推荐使用StrictRedis方法。</p><p>不推荐Redis类，原因是他和咱们在redis-cli操作有些不一样，主要不一样是下面这三个方面。</p><p>·LREM：参数 ‘num’ 和 ‘value’ 的顺序交换了一下，cli是 lrem queueName 0 ‘string’ 。 这里的0时所有的意思。 但是Redis这个类，把控制和string调换了。</p><p>·ZADD：实现时 score 和 value 的顺序不小心弄反了，后来有人用了，就这样了</p><p>·SETEX: time 和 value 的顺序反了</p><p>.Pool: 连接池</p><p>Redis的连接池的方法：</p>
 <pre><code>pool = redis.ConnectionPool(host=‘localhost‘, port=6379, db=0)
 
-r = redis.Redis(connection_pool=pool)</code></pre>
+r = redis.Redis(connection_pool=pool)
+</code></pre>
 <p>StrictRedis的连接池的实现方式:</p>
-
 <pre><code>In [4]: pool = redis.ConnectionPool(host=‘127.0.0.1‘, port=6379)
 
-In [5]: r = redis.StrictRedis(connection_pool=pool)</code></pre>
-<p>官方的创建redis的时候，都可以添加什么参数。</p>
-<blockquote><p>class redis.StrictRedis(host=‘localhost‘, port=6379, db=0, password=None, socket_timeout=None, connection_pool=None, charset=‘utf-8‘, errors=‘strict‘, decode_responses=False, unix_socket_path=None)
-Implementation of the Redis protocol.
+In [5]: r = redis.StrictRedis(connection_pool=pool)
+</code></pre>
+<p>官方的创建redis的时候，都可以添加什么参数。</p><blockquote>
+<p>class redis.StrictRedis(host=‘localhost‘, port=6379, db=0, password=None, socket_timeout=None, connection_pool=None, charset=‘utf-8‘, errors=‘strict‘, decode_responses=False, unix_socket_path=None)</p></blockquote>
+<p>Implementation of the Redis protocol.
 This abstract class provides a Python interface to all Redis commands and an implementation of the Redis protocol.
-Connection and Pipeline derive from this, implementing how the commands are sent and received to the Redis server</p>
-</blockquote>
-<p>redis的对于有些编码入库的问题，redis的连接附加的参数里面，默认编码是utf-8，但是如果你非要用GBK那就需要指明你的chardet和decode_responses为True 。</p>
-<p>原文地址(还是我的博客): <a href="https://www.yifeilu.cn/index.php/archives/32/">https://www.yifeilu.cn/index.php/archives/32/</a></p>
-
+Connection and Pipeline derive from this, implementing how the commands are sent and received to the Redis server</p><p>redis的对于有些编码入库的问题，redis的连接附加的参数里面，默认编码是utf-8，但是如果你非要用GBK那就需要指明你的chardet和decode_responses为True 。</p><p>原文地址(还是我的博客): <a href="https://www.yifeilu.cn/index.php/archives/32/"><a href="https://www.yifeilu.cn/index.php/archives/32/">https://www.yifeilu.cn/index.php/archives/32/</a></a></p>
             </div>
         </article>
         <div id="ga-tags">
     
     <span class="ga-tag">
-        <a class="ga-highlight" href="/Blog/tag/博客/">#博客</a>
+        <a class="ga-highlight" href="/Blog/tag/%E5%8D%9A%E5%AE%A2/">#博客</a>
     </span>
     
     <span class="ga-tag">
@@ -171,7 +161,7 @@ Connection and Pipeline derive from this, implementing how the commands are sent
                     <script>
                         var site_build_date = "2019-2-18T16:51+08:00"
                     </script>
-                    <script src="https://cdn.jsdelivr.net/gh/YihuiLu/Blog@gh-pages/assets/galileo-dc4baa7cf4.js"></script>
+                    <script src="https://cdn.jsdelivr.net/gh/YihuiLu/Blog@gh-pages/assets/galileo-7c8cea54ab.js"></script>
                 </footer>
             </div>
         </div>
