@@ -30,14 +30,14 @@ key_words = ['Maverick', '熊猫小A', 'Galileo', 'blog']
 language = 'zh-CN'
 external_links = [
     {
-        "name": "Maverick",
-        "url": "https://github.com/AlanDecode/Maverick",
-        "brief": "🏄‍ Go My Own Way."
+        "name": "吾爱破解",
+        "url": "https://www.52pojie.cn/",
+        "brief": "吾爱破解论坛致力于软件安全与病毒分析的前沿，丰富的技术版块交相辉映，由无数热衷于软件加密解密及反病毒爱好者共同维护."
     },
     {
-        "name": "三無計劃",
-        "url": "https://www.imalan.cn",
-        "brief": "熊猫小A的主页。"
+        "name": "一灰小站",
+        "url": "https://www.yifeilu.cn",
+        "brief": "一灰的旧主页。"
     }
 ]
 nav = [
@@ -49,6 +49,11 @@ nav = [
     {
         "name": "归档",
         "url": "${site_prefix}archives/",
+        "target": "_self"
+    },
+    {
+        "name": "头痛记",
+        "url": "${site_prefix}NoMigraine/",
         "target": "_self"
     },
     {
