@@ -23,19 +23,20 @@
         }
     </script>
     
-<title>标签: 博客 - 一灰的技术博客</title>
+<title>利用sqlacodegen自动生成ORM实体类 - 一灰的技术博客</title>
 <meta name="author" content="一灰" />
-<meta name="description" content="花径不曾缘客扫，蓬门今始为君开" />
-<meta property="og:title" content="标签: 博客 - 一灰的技术博客" />
-<meta property="og:description" content="花径不曾缘客扫，蓬门今始为君开" />
+<meta name="description" content="某些特殊情况下我们需要反向生成ORM框架Model类..." />
+<meta property="og:title" content="利用sqlacodegen自动生成ORM实体类 - 一灰的技术博客" />
+<meta property="og:description" content="某些特殊情况下我们需要反向生成ORM框架Model类..." />
 <meta property="og:site_name" content="一灰的技术博客" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="/Blog/tag/%E5%8D%9A%E5%AE%A2/" />
-<meta property="og:image" content="一灰的技术博客" />
-<meta name="twitter:title" content="标签: 博客 - 一灰的技术博客" />
-<meta name="twitter:description" content="花径不曾缘客扫，蓬门今始为君开" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/Blog/archives/sqlacodegen/" />
+<meta property="og:image" content="" />
+<meta property="article:published_time" content="2018-08-12T15:05:00-00.00" />
+<meta name="twitter:title" content="利用sqlacodegen自动生成ORM实体类 - 一灰的技术博客" />
+<meta name="twitter:description" content="某些特殊情况下我们需要反向生成ORM框架Model类..." />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/YihuiLu/Blog@gh-pages/logo.png" />
+<meta name="twitter:image" content="" />
 
 
     
@@ -63,83 +64,92 @@
             <div class="wrapper">
                 
 <main>    
-    
+    <section class="ga-section ga-content">
+        <article class="yue">
+            <h1 class="ga-post_title">利用sqlacodegen自动生成ORM实体类</h1>
+            <span class="ga-post_meta ga-mono">
+                <span>一灰</span>
+                <time>
+                    2018-08-12
+                </time>
+                
+                in <a no-style class="category" href="/Blog/category/Python/">
+                    Python
+                </a>
+                
+                
+            </span>
+            <div class="ga-content_body">
+                <p><strong>以下方法可以很方便的通过数据库表来生成ORM实体，节省某些特殊情况下攻城狮们的工作量</strong></p><p>命令：</p><div class="highlight"><pre><span></span>sqlacodegen --noviews --noconstraints --noindexes --outfile d:<span class="se">\\</span>models.py mysql://username:passwd@服务器地址:3306/dbname
+</pre></div>
+<table>
+<thead>
+<tr>
+  <th style="text-align:left">key</th>
+  <th style="text-align:left">meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align:left">noviews</td>
+  <td style="text-align:left">不生成视图</td>
+</tr>
+<tr>
+  <td style="text-align:left">noconstraints</td>
+  <td style="text-align:left">不生成外键关联</td>
+</tr>
+<tr>
+  <td style="text-align:left">noindexes</td>
+  <td style="text-align:left">不生成索引</td>
+</tr>
+<tr>
+  <td style="text-align:left">outfile</td>
+  <td style="text-align:left">文件输出路径</td>
+</tr>
+</tbody>
+</table>
 
-<section id="ga-archive_list" class="ga-section" data-title="#博客">
-    <ul>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/Blog/archives/SpeechRecognition/">MacOS 下 Pycharm运行SpeechRecognition无法录音</a></h1>
-            <time class="ga-mono" datetime="2020-07-17T11:05:00-00.00">
-                2020-07-17
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/Blog/archives/redis/">DBUtils 报错 codec can't encode characters in position</a></h1>
-            <time class="ga-mono" datetime="2020-07-17T11:05:00-00.00">
-                2020-07-17
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/Blog/archives/CSRF/">Flask的跨域请求问题（CSRF）</a></h1>
-            <time class="ga-mono" datetime="2019-07-27T01:05:00-00.00">
-                2019-07-27
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/Blog/archives/redis/">redis.Redis与redis.StrictRedis区别</a></h1>
-            <time class="ga-mono" datetime="2019-07-17T20:34:00-00.00">
-                2019-07-17
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/Blog/archives/FOREIGN_KEY_CHECKS/">MySQL & SQLit忽略外键约束删除数据</a></h1>
-            <time class="ga-mono" datetime="2019-02-22T09:05:00-00.00">
-                2019-02-22
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/Blog/archives/mysql_group_by_1055/">利用sqlacodegen自动生成ORM实体类</a></h1>
-            <time class="ga-mono" datetime="2019-01-22T11:05:00-00.00">
-                2019-01-22
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/Blog/archives/sqlacodegen/">利用sqlacodegen自动生成ORM实体类</a></h1>
-            <time class="ga-mono" datetime="2018-08-12T15:05:00-00.00">
-                2018-08-12
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/Blog/archives/linux/">linux文件合并</a></h1>
-            <time class="ga-mono" datetime="2017-08-17T11:05:00-00.00">
-                2017-08-17
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/Blog/archives/datetime/">Python时间处理小结</a></h1>
-            <time class="ga-mono" datetime="2017-07-17T11:05:00-00.00">
-                2017-07-17
-            </time>
-        </li>
-        
-    </ul>
+            </div>
+        </article>
+        <div id="ga-tags">
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/Blog/tag/%E5%8D%9A%E5%AE%A2/">#博客</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/Blog/tag/Python/">#Python</a>
+    </span>
+    
+</div>
+    </section>
+
+    
+<section id="ga-content_pager">
+
+    <div class="next">
+        <a class="ga-highlight" href="/Blog/archives/mysql_group_by_1055/">利用sqlacodegen自动生成ORM实体类</a>
+        <p class="yue">1055, "Expression</p>
+    </div>
+
+
+    <div class="prev">
+        <a class="ga-highlight" href="/Blog/archives/linux/">linux文件合并</a>
+        <p class="yue">linux</p>
+    </div>
+
 </section>
 
-<section class="ga-section ga-mono" id="ga-pager">
-    
-    <span>Page 1 of 1</span>
-    
-</section>
 
+    
+        <script>
+            var initValine = function () {
+                new Valine({"enable": true, "el": "#vcomments", "appId": "FHu0SCPDeyBjMY4s0ECouzDf-gzGzoHsz", "appKey": "UecRNirhvv66x0fxlpKjmFSk"});
+            }
+        </script>
+        <script defer src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js' onload="initValine()"></script>
+        <div id="vcomments"></div>
+    
 
 </main>
 

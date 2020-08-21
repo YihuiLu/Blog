@@ -27,7 +27,49 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
     <loc>/Blog/archives/redis/</loc>
+    <lastmod>2020-07-17</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/Blog/archives/CSRF/</loc>
+    <lastmod>2019-07-27</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/Blog/archives/redis/</loc>
     <lastmod>2019-07-17</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/Blog/archives/FOREIGN_KEY_CHECKS/</loc>
+    <lastmod>2019-02-22</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/Blog/archives/mysql_group_by_1055/</loc>
+    <lastmod>2019-01-22</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/Blog/archives/sqlacodegen/</loc>
+    <lastmod>2018-08-12</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/Blog/archives/linux/</loc>
+    <lastmod>2017-08-17</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
 </url>
