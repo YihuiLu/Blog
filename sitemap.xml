@@ -5,77 +5,77 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	
 
 <url>
-    <loc>/Blog/migraine/</loc>
+    <loc>/migraine/</loc>
     <lastmod>2019-07-17</lastmod>
     <changefreq>always</changefreq>
     <priority>0.8</priority>
 </url>
 
 <url>
-    <loc>/Blog/about/</loc>
+    <loc>/about/</loc>
     <lastmod>2017-06-28</lastmod>
     <changefreq>always</changefreq>
     <priority>0.8</priority>
 </url>
 
 <url>
-    <loc>/Blog/archives/SpeechRecognition/</loc>
+    <loc>/archives/SpeechRecognition/</loc>
     <lastmod>2020-07-17</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
-    <loc>/Blog/archives/redis/</loc>
+    <loc>/archives/redis/</loc>
     <lastmod>2020-07-17</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
-    <loc>/Blog/archives/CSRF/</loc>
+    <loc>/archives/CSRF/</loc>
     <lastmod>2019-07-27</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
-    <loc>/Blog/archives/redis/</loc>
+    <loc>/archives/redis/</loc>
     <lastmod>2019-07-17</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
-    <loc>/Blog/archives/FOREIGN_KEY_CHECKS/</loc>
+    <loc>/archives/FOREIGN_KEY_CHECKS/</loc>
     <lastmod>2019-02-22</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
-    <loc>/Blog/archives/mysql_group_by_1055/</loc>
+    <loc>/archives/mysql_group_by_1055/</loc>
     <lastmod>2019-01-22</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
-    <loc>/Blog/archives/sqlacodegen/</loc>
+    <loc>/archives/sqlacodegen/</loc>
     <lastmod>2018-08-12</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
-    <loc>/Blog/archives/linux/</loc>
+    <loc>/archives/linux/</loc>
     <lastmod>2017-08-17</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
-    <loc>/Blog/archives/datetime/</loc>
+    <loc>/archives/datetime/</loc>
     <lastmod>2017-07-17</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
