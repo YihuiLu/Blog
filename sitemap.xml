@@ -19,6 +19,20 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+    <loc>/Blog/archives/java/</loc>
+    <lastmod>2020-09-03</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/Blog/archives/Celery/</loc>
+    <lastmod>2020-09-01</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
     <loc>/Blog/archives/Flask/</loc>
     <lastmod>2020-08-17</lastmod>
     <changefreq>always</changefreq>
