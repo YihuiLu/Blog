@@ -1,18 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一灰的技术博客</title><link>/Blog/</link><description>花径不曾缘客扫，蓬门今始为君开</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/YihuiLu/Blog@gh-pages/logo.png</url><title>一灰的技术博客</title><link>/Blog/</link></image><language>zh-CN</language><lastBuildDate>Fri, 04 Sep 2020 09:17:51 +0806</lastBuildDate><pubDate>Fri, 04 Sep 2020 09:17:51 +0806</pubDate><item><title>利用sqlacodegen自动生成ORM实体类</title><link>/Blog/archives/mysql_group_by_1055/</link><description>&lt;p&gt;今天在使用group_by时遇到错误，大概是以下样子：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;(cymysql.err.InternalError) (1055, &amp;quot;Expression #2 of SELECT list is not in GROUP BY clause and contains nonaggregated column 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;[SQL]CREATETABLE`m_part`(`f_id`INTNOTNULL,`f_name`VARCHAR(20)NULL,PRIMARYKEY(`f_id`))ENGINE=myisamDEFAULTCHARSET=utf8PARTITIONBYRANGE(f_id)(PARTITIONp0VALUESlessTHAN(10),PARTITIONp1VALUESlessTHAN(20))
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;原因：
-mysql5.7.5版本开始，sql_mode使用的是默认值( 如上)，而之前使用的mysql配置文件中sql_mode=”“,由于这个特性使在使用group_by时出现报错&lt;/p&gt;&lt;p&gt;linux下解决方案：&lt;/p&gt;&lt;p&gt;修改&lt;strong&gt;mysql.conf&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo vim /etc/mysql/mysql.conf.d/mysql.conf
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;然后将
-&lt;code&gt;sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES&lt;/code&gt;
-添加至文件末尾&lt;/p&gt;&lt;p&gt;重启服务：
-&lt;code&gt;/etc/init.d/mysql restart&lt;/code&gt;&lt;/p&gt;&lt;p&gt;问题解决&lt;/p&gt;</description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/mysql_group_by_1055/</guid><pubDate>Tue, 22 Jan 2019 11:05:00 +0806</pubDate></item><item><title>MySQL &amp; SQLit忽略外键约束删除数据</title><link>/Blog/archives/FOREIGN_KEY_CHECKS/</link><description>&lt;p&gt;今天在删除表数据时遇到一个问题：&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一灰的技术博客</title><link>/Blog/</link><description>花径不曾缘客扫，蓬门今始为君开</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/YihuiLu/Blog@gh-pages/logo.png</url><title>一灰的技术博客</title><link>/Blog/</link></image><language>zh-CN</language><lastBuildDate>Mon, 07 Sep 2020 02:22:04 +0806</lastBuildDate><pubDate>Mon, 07 Sep 2020 02:22:04 +0806</pubDate><item><title>MySQL &amp; SQLit忽略外键约束删除数据</title><link>/Blog/archives/FOREIGN_KEY_CHECKS/</link><description>&lt;p&gt;今天在删除表数据时遇到一个问题：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;ERROR 1701 (42000): Cannot truncate a table referenced
 in a foreign key constraint
 (`diandian_loan`.`auth_group_permissions`, CONSTRAINT 
@@ -138,4 +125,31 @@ Java(TM) SE Runtime Environment (build 14.0.2+12-46)
 Java HotSpot(TM) 64-Bit Server VM (build 14.0.2+12-46, mixed mode, sharing)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h1&gt;大功告成&lt;/h1&gt;
-</description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/java/</guid><pubDate>Thu, 03 Sep 2020 13:34:00 +0806</pubDate></item><item><title>Python 包管理工具合集</title><link>/Blog/archives/Python/</link><description></description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/Python/</guid><pubDate>Fri, 04 Sep 2020 11:14:00 +0806</pubDate></item></channel></rss>
+</description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/java/</guid><pubDate>Thu, 03 Sep 2020 13:34:00 +0806</pubDate></item><item><title>Python 包管理工具合集</title><link>/Blog/archives/Python/</link><description></description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/Python/</guid><pubDate>Fri, 04 Sep 2020 11:14:00 +0806</pubDate></item><item><title>sqlalchemy 绑定多个数据库</title><link>/Blog/archives/Celery/</link><description>&lt;p&gt;#绑定多个数据库
+从 0.12 开始，Flask-SQLAlchemy 可以容易地连接到多个数据库。为了实现这个功能，预配置了 SQLAlchemy 来支持多个 “binds”。&lt;/p&gt;&lt;p&gt;什么是绑定(binds)? 在 SQLAlchemy 中一个绑定(bind)是能执行 SQL 语句并且通常是一个连接或者引擎类的东东。在 Flask-SQLAlchemy 中，绑定(bind)总是背后自动为您创建好的引擎。这些引擎中的每个之后都会关联一个短键（bind key）。这个键会在模型声明时使用来把一个模型关联到一个特定引擎。&lt;/p&gt;&lt;p&gt;如果模型没有关联一个特定的引擎的话，就会使用默认的连接(SQLALCHEMY_DATABASE_URI 配置值)。&lt;/p&gt;&lt;p&gt;##示例配置
+下面的配置声明了三个数据库连接。特殊的默认值和另外两个分别名为 users&lt;code&gt;（用于用户）和&lt;/code&gt;appmeta 连接到一个提供只读访问应用内部数据的 sqlite 数据库）:&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;SQLALCHEMY_DATABASE_URI&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;postgres://localhost/main&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;SQLALCHEMY_BINDS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;users&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;        &lt;span class="s1"&gt;&amp;#39;mysqldb://localhost/users&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;appmeta&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;      &lt;span class="s1"&gt;&amp;#39;sqlite:////path/to/appmeta.db&amp;#39;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;##创建和删除表
+create_all() 和 drop_all() 方法默认作用于所有声明的绑定(bind)，包括默认的。这个行为可以通过提供 bind 参数来定制。它可以是单个绑定(bind)名, '&lt;strong&gt;all&lt;/strong&gt;' 指向所有绑定(binds)或一个绑定(bind)名的列表。默认的绑定(bind)(SQLALCHEMY_DATABASE_URI) 名为 None:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt;&amp;gt;&amp;gt; db.create_all()
+&amp;gt;&amp;gt;&amp;gt; db.create_all(bind=['users'])
+&amp;gt;&amp;gt;&amp;gt; db.create_all(bind='appmeta')
+&amp;gt;&amp;gt;&amp;gt; db.drop_all(bind=None)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;##引用绑定(Binds)
+当您声明模型时，您可以用 &lt;strong&gt;bind_key&lt;/strong&gt; 属性指定绑定(bind):&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;User&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Model&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;__bind_key__&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;users&amp;#39;&lt;/span&gt;
+    &lt;span class="nb"&gt;id&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Column&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Integer&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;primary_key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;username&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Column&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;80&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;unique&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;bind key 存储在表中的 info 字典中作为 'bind_key' 键值。了解这个很重要，因为当您想要直接创建一个表对象时，您会需要把它放在那:&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;user_favorites&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Table&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;user_favorites&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Column&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;user_id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Integer&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ForeignKey&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;user.id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)),&lt;/span&gt;
+    &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Column&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;message_id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Integer&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;db&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ForeignKey&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;message.id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)),&lt;/span&gt;
+    &lt;span class="n"&gt;info&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;bind_key&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;users&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;如果您在模型上指定了 &lt;strong&gt;bind_key&lt;/strong&gt; ，您可以用它们准确地做您想要的。模型会自行连 接到指定的数据库连接。&lt;/p&gt;</description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/Celery/</guid><pubDate>Mon, 07 Sep 2020 10:18:00 +0806</pubDate></item></channel></rss>
