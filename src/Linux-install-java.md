@@ -13,14 +13,14 @@ tags:
 excerpt: 
 ---
 
-###1. 在/usr/下创建java目录
+### 1. 在/usr/下创建java目录
 
 ```
 root@9314e39c1d8c: mkdir/usr/java
 root@9314e39c1d8c: cd /usr/java
 ```
 
-###2. 下载Java压缩文件并解压
+### 2. 下载Java压缩文件并解压
 
 ```
 root@9314e39c1d8c: curl -O curl -O https://download.oracle.com/otn-pub/java/jdk/14.0.2+12/205943a0976c4ed48cb16f1043c5c647/jdk-14.0.2_linux-x64_bin.tar.gz?AuthParam=1599111678_3050bd9ff5d540cc544a0567b2d3e31f
@@ -31,7 +31,7 @@ root@9314e39c1d8c: tar -zxvf jdk-14.0.2_linux-x64_bin.tar.gz\?AuthParam\=1599111
 下载完以后自行调整安装指令
 
 
-###3. 设置环境变量
+### 3. 设置环境变量
 
 ```
 root@9314e39c1d8c: vi /etc/profile
@@ -45,11 +45,11 @@ PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
 export JAVA_HOME JRE_HOME CLASS_PATH PATH
 ```
 
-###4. 更新配置
+### 4. 更新配置
 
 ```root@9314e39c1d8c: source /etc/profile```
 
-###5. 验证
+### 5. 验证
 
 ```
 root@9314e39c1d8c:/usr/java# java --version

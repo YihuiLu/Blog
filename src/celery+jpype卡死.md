@@ -1,15 +1,13 @@
 ---
 layout: post
 title: Celery+jpype 卡死，Celery+Java 卡死，Celery Task 卡死
-slug: Celery
+slug: Celery_jpype
 date: 2020-9-8 16:58
 status: publish
 author: 一灰
 categories: 
   - Python
 tags: 
-  - 博客
-  - Flask
   - Celery
   - jpype
 excerpt: 

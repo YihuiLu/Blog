@@ -9,7 +9,8 @@ categories:
   - Python
 tags: 
   - 博客
-  - Celery Flask
+  - Celery
+  - Flask
 excerpt: 
 ---
 

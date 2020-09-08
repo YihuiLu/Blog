@@ -1,14 +1,13 @@
 ---
 layout: post
 title: sqlalchemy 绑定多个数据库
-slug: Celery
+slug: sqlalchemy_db
 date: 2020-9-7 10:18
 status: publish
 author: 一灰
 categories: 
   - Python
 tags: 
-  - 博客
   - Flask
   - Sqlalchemy
 excerpt: 
