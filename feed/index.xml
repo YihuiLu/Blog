@@ -1,22 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一灰的技术博客</title><link>/Blog/</link><description>花径不曾缘客扫，蓬门今始为君开</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/YihuiLu/Blog@gh-pages/logo.png</url><title>一灰的技术博客</title><link>/Blog/</link></image><language>zh-CN</language><lastBuildDate>Mon, 07 Sep 2020 02:22:04 +0806</lastBuildDate><pubDate>Mon, 07 Sep 2020 02:22:04 +0806</pubDate><item><title>MySQL &amp; SQLit忽略外键约束删除数据</title><link>/Blog/archives/FOREIGN_KEY_CHECKS/</link><description>&lt;p&gt;今天在删除表数据时遇到一个问题：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ERROR 1701 (42000): Cannot truncate a table referenced
-in a foreign key constraint
-(`diandian_loan`.`auth_group_permissions`, CONSTRAINT 
-`auth_group_permissi_permission_id_84c5c92e_fk_auth_p
-ermission_id` FOREIGN KEY (`permission_id`) REFERENCES 
-`diandian_loan`.`auth_permissio)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;意思是由于有&lt;strong&gt;主外键约束&lt;/strong&gt;，所以不能删除表数据。&lt;/p&gt;&lt;p&gt;即使当时已经将父表数据清空还是不行。&lt;/p&gt;&lt;h3&gt;解决办法：&lt;/h3&gt;
-&lt;p&gt;先取消主外键关系验证：&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;SET&lt;/span&gt; &lt;span class="n"&gt;FOREIGN_KEY_CHECKS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;然后删除需要删除的数据&lt;/p&gt;&lt;p&gt;最后恢复：&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;SET&lt;/span&gt; &lt;span class="n"&gt;FOREIGN_KEY_CHECKS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;SQLit略有不同&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;PRAGMA&lt;/span&gt; &lt;span class="n"&gt;foreign_keys&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;PRAGMA&lt;/span&gt; &lt;span class="n"&gt;foreign_keys&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;em&gt;完美解决&lt;/em&gt;&lt;/p&gt;</description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/FOREIGN_KEY_CHECKS/</guid><pubDate>Fri, 22 Feb 2019 09:05:00 +0806</pubDate></item><item><title>redis.Redis与redis.StrictRedis区别</title><link>/Blog/archives/redis/</link><description>&lt;p&gt;redis-py提供两个类Redis和StrictRedis用于实现Redis的命令，StrictRedis用于实现大部分官方的命令，并使用官方的语法和命令（比如，SET命令对应与StrictRedis.set方法）。Redis是StrictRedis的子类，用于向后兼容旧版本的redis-py。 简单说，官方推荐使用StrictRedis方法。&lt;/p&gt;&lt;p&gt;不推荐Redis类，原因是他和咱们在redis-cli操作有些不一样，主要不一样是下面这三个方面。&lt;/p&gt;&lt;p&gt;·LREM：参数 ‘num’ 和 ‘value’ 的顺序交换了一下，cli是 lrem queueName 0 ‘string’ 。 这里的0时所有的意思。 但是Redis这个类，把控制和string调换了。&lt;/p&gt;&lt;p&gt;·ZADD：实现时 score 和 value 的顺序不小心弄反了，后来有人用了，就这样了&lt;/p&gt;&lt;p&gt;·SETEX: time 和 value 的顺序反了&lt;/p&gt;&lt;p&gt;.Pool: 连接池&lt;/p&gt;&lt;p&gt;Redis的连接池的方法：&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一灰的技术博客</title><link>/Blog/</link><description>花径不曾缘客扫，蓬门今始为君开</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/YihuiLu/Blog@gh-pages/logo.png</url><title>一灰的技术博客</title><link>/Blog/</link></image><language>zh-CN</language><lastBuildDate>Tue, 08 Sep 2020 09:28:44 +0806</lastBuildDate><pubDate>Tue, 08 Sep 2020 09:28:44 +0806</pubDate><item><title>redis.Redis与redis.StrictRedis区别</title><link>/Blog/archives/redis/</link><description>&lt;p&gt;redis-py提供两个类Redis和StrictRedis用于实现Redis的命令，StrictRedis用于实现大部分官方的命令，并使用官方的语法和命令（比如，SET命令对应与StrictRedis.set方法）。Redis是StrictRedis的子类，用于向后兼容旧版本的redis-py。 简单说，官方推荐使用StrictRedis方法。&lt;/p&gt;&lt;p&gt;不推荐Redis类，原因是他和咱们在redis-cli操作有些不一样，主要不一样是下面这三个方面。&lt;/p&gt;&lt;p&gt;·LREM：参数 ‘num’ 和 ‘value’ 的顺序交换了一下，cli是 lrem queueName 0 ‘string’ 。 这里的0时所有的意思。 但是Redis这个类，把控制和string调换了。&lt;/p&gt;&lt;p&gt;·ZADD：实现时 score 和 value 的顺序不小心弄反了，后来有人用了，就这样了&lt;/p&gt;&lt;p&gt;·SETEX: time 和 value 的顺序反了&lt;/p&gt;&lt;p&gt;.Pool: 连接池&lt;/p&gt;&lt;p&gt;Redis的连接池的方法：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;pool = redis.ConnectionPool(host=‘localhost‘, port=6379, db=0)
 
 r = redis.Redis(connection_pool=pool)
@@ -152,4 +135,83 @@ create_all() 和 drop_all() 方法默认作用于所有声明的绑定(bind)，�
     &lt;span class="n"&gt;info&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;bind_key&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;users&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;如果您在模型上指定了 &lt;strong&gt;bind_key&lt;/strong&gt; ，您可以用它们准确地做您想要的。模型会自行连 接到指定的数据库连接。&lt;/p&gt;</description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/Celery/</guid><pubDate>Mon, 07 Sep 2020 10:18:00 +0806</pubDate></item></channel></rss>
+&lt;p&gt;如果您在模型上指定了 &lt;strong&gt;bind_key&lt;/strong&gt; ，您可以用它们准确地做您想要的。模型会自行连 接到指定的数据库连接。&lt;/p&gt;</description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/Celery/</guid><pubDate>Mon, 07 Sep 2020 10:18:00 +0806</pubDate></item><item><title>Celery+jpype 卡死，Celery+Java 卡死，Celery Task 卡死</title><link>/Blog/archives/Celery/</link><description>&lt;p&gt;最近在写一个项目的时候同时使用到了&lt;code&gt;Celery&lt;/code&gt;和&lt;code&gt;jpype&lt;/code&gt;&lt;/p&gt;&lt;p&gt;但是在实际使用过程中出现了Celery Task进程卡死的情况&lt;/p&gt;&lt;p&gt;解决思路如下：&lt;/p&gt;&lt;p&gt;首先是观察到涉及到使用&lt;code&gt;jpype&lt;/code&gt;的代码在本地运行没有问题，代码片段如下：&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;jpype&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+
+&lt;span class="o"&gt;...&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;load_trie&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;src&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;maps&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;JClass&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;java.util.TreeMap&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)()&lt;/span&gt;  &lt;span class="c1"&gt;# 创建 TreeMap 空间&lt;/span&gt;
+
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;word&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;src&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;word&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;maps&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;word&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;word&lt;/span&gt;
+    &lt;span class="n"&gt;rs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;JClass&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;com.hankcs.hanlp.collection.trie.DoubleArrayTrie&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)(&lt;/span&gt;&lt;span class="n"&gt;maps&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;rs&lt;/span&gt;
+
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;经过排错后发现代码停止在以下位置：&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;rs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;JClass&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;com.hankcs.hanlp.collection.trie.DoubleArrayTrie&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)(&lt;/span&gt;&lt;span class="n"&gt;maps&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;这段代码调用了Java相关的包，于是Google到了以下内容
+&lt;a href="https://github.com/jpype-project/jpype/issues/358"&gt;&lt;a href="https://github.com/jpype-project/jpype/issues/358"&gt;https://github.com/jpype-project/jpype/issues/358&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;在这个issues中提到了：&lt;/p&gt;&lt;blockquote&gt;
+&lt;p&gt;Wow that is failing in a very strange spot. When you said failed in a thread I figured it would be in the proxy code, but this is a fail on getting environment variables on startup. Are you sure that you don't have more than one JVM started? Your module doesn't do a check for isJVMStarted, but I thought that we have explicit checks to prevent a fail there so that seems unlikely. The trace also does not show a second call.
+My next best guess is this is a security violation. I don't know much about celery, but it may be possible that it is trying to start the JVM from within some type of sand box. My approach would be to instrument the call to JPEnv::CreateJavaVM to record all the inputs that are being passed to JVM and see if I was sure that nothing bad got sent to the JVM call. As you can see in the trace, we haven't even made contact with the JVM, so assuming we are providing it with valid inputs the bug is likely in the JVM and not within JPype.
+The last option here though it seems unlikely is the shared memory loader for the jvm has somehow failed. The only thing that we do with the JVM before this point is loading the shared library into memory. On architectures with mixed executable files (32/64) this can often go wrong leading to a bad entry point. But as you ran to the Parse locale it seems unlikely.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+
+&lt;pre&gt;&lt;code&gt;C  [libjava.dylib+0xd2a7]  getMacOSXLocale+0x123
+C  [libjava.dylib+0xd353]  setupMacOSXLocale+0x12
+C  [libjava.dylib+0xd765]  ParseLocale+0x2e
+C  [libjava.dylib+0xd4ef]  GetJavaProperties+0x183
+C  [libjava.dylib+0x5cbb]  Java_java_lang_System_initProperties+0x30
+j  java.lang.System.initProperties(Ljava/util/Properties;)Ljava/util/Properties;+0
+j  java.lang.System.initializeSystemClass()V+13
+v  ~StubRoutines::call_stub
+V  [libjvm.dylib+0x2f0b3a]
+V  [libjvm.dylib+0x2f0d35]
+V  [libjvm.dylib+0x2f0ead]
+V  [libjvm.dylib+0x57313b]
+V  [libjvm.dylib+0x3271b2]
+C  [_jpype.cpython-36m-darwin.so+0x242cb]  _ZN5JPEnv12CreateJavaVMEPv+0x3b
+The specific failure point is
+
+ // Get the entry points in the shared library
+ loadEntryPoints(vmPath);  &amp;lt;== Could load invalid pointers
+
+ JavaVMInitArgs jniArgs;
+ jniArgs.options = NULL;
+
+ // prepare this ...
+ jniArgs.version = USE_JNI_VERSION;
+ jniArgs.ignoreUnrecognized = ignoreUnrecognized;
+
+ jniArgs.nOptions = (jint)args.size();
+ jniArgs.options = (JavaVMOption*)malloc(sizeof(JavaVMOption)*jniArgs.nOptions);
+ memset(jniArgs.options, 0, sizeof(JavaVMOption)*jniArgs.nOptions);
+ for (int i = 0; i &amp;lt; jniArgs.nOptions; i++)
+ {
+   jniArgs.options[i].optionString = (char*)args[i].c_str();  &amp;lt;== All options should be valid
+ }
+ JPEnv::CreateJavaVM((void*)&amp;amp;jniArgs);  &amp;lt;== Everything in the structure should be valid at this point
+ free(jniArgs.options);
+The only trace I could find that was similar is
+
+https://bugs.openjdk.java.net/secure/attachment/72587/hs_err_pid55488.log
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;再加上这个issues中的其他信息，猜测是在&lt;code&gt;celery&lt;/code&gt;的&lt;code&gt;worker&lt;/code&gt;中因为某种环境的影响导致&lt;code&gt;Java&lt;/code&gt;无法正常运行，并与&lt;code&gt;JVM&lt;/code&gt;有关&lt;/p&gt;&lt;p&gt;并且最后他们提到&lt;/p&gt;&lt;blockquote&gt;
+&lt;p&gt;Starting after the fork is by far the safest approach.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;然后这个问题还关闭了，这就郁闷了，但请教同事建议我看了这个：
+&lt;a href="https://stackoverflow.com/questions/12003221/celery-task-schedule-ensuring-a-task-is-only-executed-one-at-a-time"&gt;&lt;a href="https://stackoverflow.com/questions/12003221/celery-task-schedule-ensuring-a-task-is-only-executed-one-at-a-time"&gt;https://stackoverflow.com/questions/12003221/celery-task-schedule-ensuring-a-task-is-only-executed-one-at-a-time&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;最后找到了：&lt;a href="https://docs.celeryproject.org/en/stable/reference/celery.bin.worker.html#cmdoption-celery-worker-p"&gt;&lt;a href="https://docs.celeryproject.org/en/stable/reference/celery.bin.worker.html#cmdoption-celery-worker-p"&gt;https://docs.celeryproject.org/en/stable/reference/celery.bin.worker.html#cmdoption-celery-worker-p&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;猜测跟worker运行时的线程约束有关，于是乎测试：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;-P, --pool
+Pool implementation:
+
+prefork (default), eventlet, gevent, threads or solo.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;##然后就顺利的成功了&lt;/p&gt;&lt;p&gt;最后的worker启动命令如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;celery -A celery_app.worker:celery worker -c 4 -l info -P solo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;重点在于&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;-P solo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个命令指定了每个worker只能用单线程模式执行，这样就不会导致JVM出现不可预知的问题&lt;/p&gt;&lt;p&gt;经过测试在指定 &lt;code&gt;-P solo&lt;/code&gt; 的同时可以指定 &lt;code&gt;-c&lt;/code&gt;&lt;/p&gt;&lt;p&gt;仓促记录，日后修改&lt;/p&gt;</description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/Celery/</guid><pubDate>Tue, 08 Sep 2020 16:58:00 +0806</pubDate></item></channel></rss>
