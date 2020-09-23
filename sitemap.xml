@@ -61,14 +61,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-    <loc>/Blog/archives/SpeechRecognition/</loc>
+    <loc>/Blog/archives/redis/</loc>
     <lastmod>2020-07-17</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
-    <loc>/Blog/archives/redis/</loc>
+    <loc>/Blog/archives/SpeechRecognition/</loc>
     <lastmod>2020-07-17</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
