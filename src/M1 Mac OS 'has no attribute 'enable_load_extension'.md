@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 解决 M1 Mac 'has no attribute 'enable_load_extension'.md
-slug: FastAPI Redis aioredis
+slug: M1 Mac 'has no attribute 'enable_load_extension'
 date: 2021-08-09 19:46
 status: publish
 author: 一灰
