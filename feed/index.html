@@ -1,35 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一灰的技术博客</title><link>/Blog/</link><description>花径不曾缘客扫，蓬门今始为君开</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/YihuiLu/Blog@gh-pages/logo.png</url><title>一灰的技术博客</title><link>/Blog/</link></image><language>zh-CN</language><lastBuildDate>Thu, 11 Mar 2021 09:43:23 +0806</lastBuildDate><pubDate>Thu, 11 Mar 2021 09:43:23 +0806</pubDate><item><title>MacOS 下 Pycharm运行SpeechRecognition无法录音</title><link>/Blog/archives/SpeechRecognition/</link><description>&lt;p&gt;关联同样环境下的其他库和服务&lt;/p&gt;&lt;p&gt;比如：摄像头&lt;/p&gt;&lt;p&gt;因为涉及到调用硬件，MacOS会请求用户授权，由于2020.3以前的Pycharm并不兼容授权功能，导致代码运行不正常&lt;/p&gt;&lt;p&gt;解决方式：&lt;/p&gt;&lt;p&gt;建议直接在终端运行代码吧，&lt;/p&gt;&lt;p&gt;或者升级Pycharm到最新&lt;/p&gt;&lt;p&gt;也可以通过其他方法让Pycharm得到授权，但太麻烦了，得不偿失&lt;/p&gt;</description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/SpeechRecognition/</guid><pubDate>Fri, 17 Jul 2020 11:05:00 +0806</pubDate></item><item><title>DBUtils 报错 codec can't encode characters in position</title><link>/Blog/archives/redis/</link><description>&lt;p&gt;今天使用DBUtils连接池遇到以下问题：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;'latin-1' codec can't encode characters in position 74-75: ordinal not in range(256)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;##解决方法：&lt;/p&gt;&lt;blockquote&gt;
-&lt;p&gt;标准的连接方式相同，在初始化PooledDB时声明 charset=’utf8’&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;##代码如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;pool = PooledDB(pymysql,
-
-mincached=5,# 连接池里的最少连接数
-
-                maxcached=30,#最大的空闲连接数，如果空闲连接数大于这个数，pool会关闭空闲连接
-
-                maxshared=1000,#当连接数达到这个数，新请求的连接会分享已经分配出去的连接
-
-                maxconnections=2000,#最大的连接数，
-
-                blocking=True,#当连接数达到最大的连接数时，在请求连接的时候，如果这个值是True，请求连接的程序会一直等待，直到当前连接数小于最大连接数，如果这个值是False，会报错，
-
-                host='rds93vu04hr3rn0o2d5io.mysql.rds.aliyuncs.com',
-
-user='yd_loan_admin',
-
-passwd='abcde123!@#',
-
-db='yd_loan_sys',
-
-port=3306,
-
-charset='utf8')
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;##经过测试问题完美解决&lt;/p&gt;</description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/redis/</guid><pubDate>Fri, 17 Jul 2020 11:05:00 +0806</pubDate></item><item><title>如何快速使用Flask框架开发一个企业级Restful API服务？</title><link>/Blog/archives/Flask/</link><description></description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/Flask/</guid><pubDate>Mon, 17 Aug 2020 13:34:00 +0806</pubDate></item><item><title>Flask + Celery 实现分布式异步处理</title><link>/Blog/archives/Celery/</link><description>&lt;p&gt;修改一下试试修改邮箱效果&lt;/p&gt;</description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/Celery/</guid><pubDate>Tue, 01 Sep 2020 13:34:00 +0806</pubDate></item><item><title>Linux 下安装Java 14（适用大多数Linux发行版）</title><link>/Blog/archives/java/</link><description>&lt;h3&gt;1. 在/usr/下创建java目录&lt;/h3&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一灰的技术博客</title><link>/Blog/</link><description>花径不曾缘客扫，蓬门今始为君开</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/YihuiLu/Blog@gh-pages/logo.png</url><title>一灰的技术博客</title><link>/Blog/</link></image><language>zh-CN</language><lastBuildDate>Mon, 09 Aug 2021 12:13:27 +0806</lastBuildDate><pubDate>Mon, 09 Aug 2021 12:13:27 +0806</pubDate><item><title>MacOS 下 Pycharm运行SpeechRecognition无法录音</title><link>/Blog/archives/SpeechRecognition/</link><description>&lt;p&gt;关联同样环境下的其他库和服务&lt;/p&gt;&lt;p&gt;比如：摄像头&lt;/p&gt;&lt;p&gt;因为涉及到调用硬件，MacOS会请求用户授权，由于2020.3以前的Pycharm并不兼容授权功能，导致代码运行不正常&lt;/p&gt;&lt;p&gt;解决方式：&lt;/p&gt;&lt;p&gt;建议直接在终端运行代码吧，&lt;/p&gt;&lt;p&gt;或者升级Pycharm到最新&lt;/p&gt;&lt;p&gt;也可以通过其他方法让Pycharm得到授权，但太麻烦了，得不偿失&lt;/p&gt;</description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/SpeechRecognition/</guid><pubDate>Fri, 17 Jul 2020 11:05:00 +0806</pubDate></item><item><title>如何快速使用Flask框架开发一个企业级Restful API服务？</title><link>/Blog/archives/Flask/</link><description></description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/Flask/</guid><pubDate>Mon, 17 Aug 2020 13:34:00 +0806</pubDate></item><item><title>Flask + Celery 实现分布式异步处理</title><link>/Blog/archives/Celery/</link><description>&lt;p&gt;修改一下试试修改邮箱效果&lt;/p&gt;</description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/Celery/</guid><pubDate>Tue, 01 Sep 2020 13:34:00 +0806</pubDate></item><item><title>Linux 下安装Java 14（适用大多数Linux发行版）</title><link>/Blog/archives/java/</link><description>&lt;h3&gt;1. 在/usr/下创建java目录&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;root@9314e39c1d8c: mkdir/usr/java
 root@9314e39c1d8c: cd /usr/java
@@ -219,4 +189,17 @@ prefork (default), eventlet, gevent, threads or solo.
 &lt;li&gt;在框架关闭时close_pool()&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;上面值得注意的是，因为aioredis是异步的，所以一处异步处处异步
-异步类不常写，所以记录一下&lt;/p&gt;</description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/FastAPI%20Redis%20aioredis/</guid><pubDate>Thu, 11 Mar 2021 17:38:00 +0806</pubDate></item></channel></rss>
+异步类不常写，所以记录一下&lt;/p&gt;</description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/FastAPI%20Redis%20aioredis/</guid><pubDate>Thu, 11 Mar 2021 17:38:00 +0806</pubDate></item><item><title>解决 M1 Mac 'has no attribute 'enable_load_extension'.md</title><link>/Blog/archives/FastAPI%20Redis%20aioredis/</link><description>&lt;p&gt;最近由于项目需要，使用&lt;code&gt;spatialite&lt;/code&gt;插件，但是实际使用时遇到以下错误&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;AttributeError: &lt;span class="s1"&gt;&amp;#39;sqlite3.Connection&amp;#39;&lt;/span&gt; object has no attribute &lt;span class="s1"&gt;&amp;#39;enable_load_extension&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;废了点心思，最终在Python3.9文档中找到如下描述：&lt;/p&gt;&lt;blockquote&gt;
+&lt;p&gt;sqlite3 模块的构建默认没有附带可加载扩展支持，因为某些平台（特别是 Mac OS X）上的 SQLite 库在编译时未使用此特性。 要获得可加载扩展支持，你必须传入 --enable-loadable-sqlite-extensions 来进行配置。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;描述比较清晰，主要是因为系统环境，导致编译时未打开&lt;code&gt;enable-loadable-sqlite-extensions&lt;/code&gt;&lt;/p&gt;&lt;p&gt;于是尝试了几个版本的python以后，最终成功编译 &lt;a href="https://www.python.org/ftp/python/3.8.10/Python-3.8.10.tgz"&gt;python3.8.10&lt;/a&gt;&lt;/p&gt;&lt;p&gt;编译流程：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 下载[python3.8.10](https://www.python.org/ftp/python/3.8.10/Python-3.8.10.tgz)到本地
+2. 解压到任意目录
+3. ./configure --enable-loadable-sqlite-extensions  # --enable-loadable-sqlite-extensions是关键
+4. make
+5. make install 
+
+# 可能会出现缺少依赖无法编译的问题，可以根据实际报错处理
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;最后经过测试可以完美调用&lt;code&gt;enable_load_extension&lt;/code&gt;函数&lt;/p&gt;</description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/FastAPI%20Redis%20aioredis/</guid><pubDate>Mon, 09 Aug 2021 19:46:00 +0806</pubDate></item></channel></rss>
