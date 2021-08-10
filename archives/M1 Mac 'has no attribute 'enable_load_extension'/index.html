@@ -19,7 +19,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "https://cdn.jsdelivr.net/gh/YihuiLu/Blog@gh-pages/6d35945ca0cc852a36e157d5742cb01a.json"
+            api: "https://cdn.jsdelivr.net/gh/YihuiLu/Blog@gh-pages/207df815b2e6ef5dd2023403e2ba437d.json"
         }
     </script>
     
@@ -84,16 +84,24 @@
 </pre></div>
 <p>废了点心思，最终在Python3.9文档中找到如下描述：</p><blockquote>
 <p>sqlite3 模块的构建默认没有附带可加载扩展支持，因为某些平台（特别是 Mac OS X）上的 SQLite 库在编译时未使用此特性。 要获得可加载扩展支持，你必须传入 --enable-loadable-sqlite-extensions 来进行配置。</p></blockquote>
-<p>描述比较清晰，主要是因为系统环境，导致编译时未打开<code>enable-loadable-sqlite-extensions</code></p><p>于是尝试了几个版本的python以后，最终成功编译 <a href="https://www.python.org/ftp/python/3.8.10/Python-3.8.10.tgz">python3.8.10</a></p><p>编译流程：</p>
-<pre><code>1. 下载[python3.8.10](https://www.python.org/ftp/python/3.8.10/Python-3.8.10.tgz)到本地
-2. 解压到任意目录
-3. ./configure --enable-loadable-sqlite-extensions  # --enable-loadable-sqlite-extensions是关键
-4. make
-5. make install 
+<p>描述比较清晰，主要是因为系统环境，导致编译时未打开<code>enable-loadable-sqlite-extensions</code></p><p>于是尝试了几个版本的python以后，最终成功编译 <a href="https://www.python.org/ftp/python/3.8.10/Python-3.8.10.tgz">python3.8.10</a></p><p>编译流程：</p><ol>
+<li><p>下载 <a href="https://www.python.org/ftp/python/3.8.10/Python-3.8.10.tgz">python3.8.10</a> 到本地</p></li>
+<li><p>解压到任意目录</p></li>
+<li>
+<pre><code>cd /解压目录
+
+./configure --enable-loadable-sqlite-extensions  
+# --enable-loadable-sqlite-extensions是关键
+
+make
+
+make install 
 
 # 可能会出现缺少依赖无法编译的问题，可以根据实际报错处理
 </code></pre>
-<p>最后经过测试可以完美调用<code>enable_load_extension</code>函数</p>
+</li>
+</ol>
+<p>最后经过测试可以完美调用 <code>enable_load_extension</code> 函数</p>
             </div>
         </article>
         <div id="ga-tags">

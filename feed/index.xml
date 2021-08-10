@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一灰的技术博客</title><link>/Blog/</link><description>花径不曾缘客扫，蓬门今始为君开</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/YihuiLu/Blog@gh-pages/logo.png</url><title>一灰的技术博客</title><link>/Blog/</link></image><language>zh-CN</language><lastBuildDate>Mon, 09 Aug 2021 12:43:18 +0806</lastBuildDate><pubDate>Mon, 09 Aug 2021 12:43:18 +0806</pubDate><item><title>MacOS 下 Pycharm运行SpeechRecognition无法录音</title><link>/Blog/archives/SpeechRecognition/</link><description>&lt;p&gt;关联同样环境下的其他库和服务&lt;/p&gt;&lt;p&gt;比如：摄像头&lt;/p&gt;&lt;p&gt;因为涉及到调用硬件，MacOS会请求用户授权，由于2020.3以前的Pycharm并不兼容授权功能，导致代码运行不正常&lt;/p&gt;&lt;p&gt;解决方式：&lt;/p&gt;&lt;p&gt;建议直接在终端运行代码吧，&lt;/p&gt;&lt;p&gt;或者升级Pycharm到最新&lt;/p&gt;&lt;p&gt;也可以通过其他方法让Pycharm得到授权，但太麻烦了，得不偿失&lt;/p&gt;</description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/SpeechRecognition/</guid><pubDate>Fri, 17 Jul 2020 11:05:00 +0806</pubDate></item><item><title>如何快速使用Flask框架开发一个企业级Restful API服务？</title><link>/Blog/archives/Flask/</link><description></description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/Flask/</guid><pubDate>Mon, 17 Aug 2020 13:34:00 +0806</pubDate></item><item><title>Flask + Celery 实现分布式异步处理</title><link>/Blog/archives/Celery/</link><description>&lt;p&gt;修改一下试试修改邮箱效果&lt;/p&gt;</description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/Celery/</guid><pubDate>Tue, 01 Sep 2020 13:34:00 +0806</pubDate></item><item><title>Linux 下安装Java 14（适用大多数Linux发行版）</title><link>/Blog/archives/java/</link><description>&lt;h3&gt;1. 在/usr/下创建java目录&lt;/h3&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>一灰的技术博客</title><link>/Blog/</link><description>花径不曾缘客扫，蓬门今始为君开</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/YihuiLu/Blog@gh-pages/logo.png</url><title>一灰的技术博客</title><link>/Blog/</link></image><language>zh-CN</language><lastBuildDate>Tue, 10 Aug 2021 06:09:58 +0806</lastBuildDate><pubDate>Tue, 10 Aug 2021 06:09:58 +0806</pubDate><item><title>MacOS 下 Pycharm运行SpeechRecognition无法录音</title><link>/Blog/archives/SpeechRecognition/</link><description>&lt;p&gt;关联同样环境下的其他库和服务&lt;/p&gt;&lt;p&gt;比如：摄像头&lt;/p&gt;&lt;p&gt;因为涉及到调用硬件，MacOS会请求用户授权，由于2020.3以前的Pycharm并不兼容授权功能，导致代码运行不正常&lt;/p&gt;&lt;p&gt;解决方式：&lt;/p&gt;&lt;p&gt;建议直接在终端运行代码吧，&lt;/p&gt;&lt;p&gt;或者升级Pycharm到最新&lt;/p&gt;&lt;p&gt;也可以通过其他方法让Pycharm得到授权，但太麻烦了，得不偿失&lt;/p&gt;</description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/SpeechRecognition/</guid><pubDate>Fri, 17 Jul 2020 11:05:00 +0806</pubDate></item><item><title>如何快速使用Flask框架开发一个企业级Restful API服务？</title><link>/Blog/archives/Flask/</link><description></description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/Flask/</guid><pubDate>Mon, 17 Aug 2020 13:34:00 +0806</pubDate></item><item><title>Flask + Celery 实现分布式异步处理</title><link>/Blog/archives/Celery/</link><description>&lt;p&gt;修改一下试试修改邮箱效果&lt;/p&gt;</description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/Celery/</guid><pubDate>Tue, 01 Sep 2020 13:34:00 +0806</pubDate></item><item><title>Linux 下安装Java 14（适用大多数Linux发行版）</title><link>/Blog/archives/java/</link><description>&lt;h3&gt;1. 在/usr/下创建java目录&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;root@9314e39c1d8c: mkdir/usr/java
 root@9314e39c1d8c: cd /usr/java
@@ -193,13 +193,21 @@ prefork (default), eventlet, gevent, threads or solo.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;废了点心思，最终在Python3.9文档中找到如下描述：&lt;/p&gt;&lt;blockquote&gt;
 &lt;p&gt;sqlite3 模块的构建默认没有附带可加载扩展支持，因为某些平台（特别是 Mac OS X）上的 SQLite 库在编译时未使用此特性。 要获得可加载扩展支持，你必须传入 --enable-loadable-sqlite-extensions 来进行配置。&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;描述比较清晰，主要是因为系统环境，导致编译时未打开&lt;code&gt;enable-loadable-sqlite-extensions&lt;/code&gt;&lt;/p&gt;&lt;p&gt;于是尝试了几个版本的python以后，最终成功编译 &lt;a href="https://www.python.org/ftp/python/3.8.10/Python-3.8.10.tgz"&gt;python3.8.10&lt;/a&gt;&lt;/p&gt;&lt;p&gt;编译流程：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1. 下载[python3.8.10](https://www.python.org/ftp/python/3.8.10/Python-3.8.10.tgz)到本地
-2. 解压到任意目录
-3. ./configure --enable-loadable-sqlite-extensions  # --enable-loadable-sqlite-extensions是关键
-4. make
-5. make install 
+&lt;p&gt;描述比较清晰，主要是因为系统环境，导致编译时未打开&lt;code&gt;enable-loadable-sqlite-extensions&lt;/code&gt;&lt;/p&gt;&lt;p&gt;于是尝试了几个版本的python以后，最终成功编译 &lt;a href="https://www.python.org/ftp/python/3.8.10/Python-3.8.10.tgz"&gt;python3.8.10&lt;/a&gt;&lt;/p&gt;&lt;p&gt;编译流程：&lt;/p&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;下载 &lt;a href="https://www.python.org/ftp/python/3.8.10/Python-3.8.10.tgz"&gt;python3.8.10&lt;/a&gt; 到本地&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;解压到任意目录&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;pre&gt;&lt;code&gt;cd /解压目录
+
+./configure --enable-loadable-sqlite-extensions  
+# --enable-loadable-sqlite-extensions是关键
+
+make
+
+make install 
 
 # 可能会出现缺少依赖无法编译的问题，可以根据实际报错处理
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;最后经过测试可以完美调用&lt;code&gt;enable_load_extension&lt;/code&gt;函数&lt;/p&gt;</description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/M1%20Mac%20%27has%20no%20attribute%20%27enable_load_extension%27/</guid><pubDate>Mon, 09 Aug 2021 19:46:00 +0806</pubDate></item></channel></rss>
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;最后经过测试可以完美调用 &lt;code&gt;enable_load_extension&lt;/code&gt; 函数&lt;/p&gt;</description><author>isRichard.Lu@gmail.com (一灰)</author><guid isPermaLink="true">/Blog/archives/M1%20Mac%20%27has%20no%20attribute%20%27enable_load_extension%27/</guid><pubDate>Mon, 09 Aug 2021 19:46:00 +0806</pubDate></item></channel></rss>
