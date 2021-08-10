@@ -19,25 +19,35 @@ enable_jsdelivr = {
 }
 
 # 站点设置
-site_name = "一灰的技术博客"
+site_name = "一灰的随手记"
 site_logo = "${static_prefix}logo.png"
 site_build_date = "2019-2-18T16:51+08:00"
 author = "一灰"
 email = "isRichard.Lu@gmail.com"
 author_homepage = "https://github.com/YihuiLu"
-description = "花径不曾缘客扫，蓬门今始为君开"
+description = "日常生活即是颂歌"
 key_words = ['Maverick', '一灰', '头痛记', 'blog']
 language = 'zh-CN'
 external_links = [
     {
+        "name": "Python Code Examples",
+        "url": "https://www.programcreek.com/python/",
+        "brief": "一个优秀的Python代码示例网站"
+    },
+    {
         "name": "吾爱破解",
         "url": "https://www.52pojie.cn/",
-        "brief": "一个一灰常逛的论坛~"
+        "brief": "我常逛的论坛~"
     },
     {
         "name": "一灰小站",
         "url": "https://www.yifeilu.cn",
-        "brief": "一灰的旧主页。"
+        "brief": "我的旧主页。"
+    },
+    {
+        "name": "联合国儿童基金会",
+        "url": "https://www.unicef.org/zh",
+        "brief": "用一点爱心帮助更多梦想。"
     }
 ]
 nav = [
@@ -74,11 +84,11 @@ social_links = [
         "url": "https://github.com/YihuiLu",
         "icon": "gi gi-github"
     },
-    # {
-    #     "name": "Weibo",
-    #     "url": "https://weibo.com/5245109677/",
-    #     "icon": "gi gi-weibo"
-    # }
+    {
+        "name": "Zhihu",
+        "url": "https://www.zhihu.com/people/yihui-24-13",
+        "icon": "gi gi-zhihu"
+    }
 ]
 
 head_addon = r'''
