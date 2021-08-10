@@ -85,9 +85,9 @@ social_links = [
         "icon": "gi gi-github"
     },
     {
-        "name": "Zhihu",
+        "name": "知乎",
         "url": "https://www.zhihu.com/people/yihui-24-13",
-        "icon": "gi gi-zhihu"
+        "icon": "gi gi-people"
     }
 ]
 
